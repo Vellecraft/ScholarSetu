@@ -1,0 +1,202 @@
+[
+  {
+    "id": "sc-pms",
+    "n": "Post-Matric Scholarship for SC Students (PMS-SC)",
+    "by": "Ministry of Social Justice & Empowerment",
+    "cat": [
+      "sc"
+    ],
+    "lvl": [
+      "hs",
+      "ug",
+      "diploma",
+      "pg",
+      "phd"
+    ],
+    "income": 250000,
+    "incomeLabel": "Published family-income ceiling: ₹2.5 lakh/year; verify current State/UT notification",
+    "benefit": "Compulsory non-refundable fees plus academic allowance. The allowance varies by course group and hosteller/day-scholar status; do not assume a fixed amount.",
+    "source": "https://socialjustice.gov.in/writereaddata/UploadFile/PMS_for_SCs_Scheme_Guidelines.pdf",
+    "apply": "https://scholarships.gov.in",
+    "docs": [
+      "SC caste certificate",
+      "Domicile certificate",
+      "Current income certificate",
+      "Admission / bonafide certificate",
+      "Previous examination marksheet",
+      "Bank account details"
+    ],
+    "checks": [
+      "Confirm the current-year income ceiling and State/UT implementation rules.",
+      "Check that your institution and course are covered and correctly mapped on the portal.",
+      "Course group and hosteller/day-scholar status affect the admissible amount."
+    ]
+  },
+  {
+    "id": "top-sc",
+    "n": "Central Sector Scholarship of Top Class Education for SC Students",
+    "by": "Ministry of Social Justice & Empowerment",
+    "cat": [
+      "sc"
+    ],
+    "lvl": [
+      "ug",
+      "pg"
+    ],
+    "income": 800000,
+    "incomeLabel": "Family income up to ₹8 lakh/year",
+    "benefit": "Eligible tuition fee and non-refundable charges, plus academic allowance under the 2026–27 scheme guidelines. Private-institution fee caps and notified-institution rules apply; check the current guideline before relying on any amount.",
+    "source": "https://socialjustice.gov.in/schemes/27",
+    "apply": "https://scholarships.gov.in",
+    "docs": [
+      "SC caste certificate",
+      "Current income certificate",
+      "Admission proof from a notified / empanelled institution",
+      "Previous examination marksheet",
+      "Bank account details"
+    ],
+    "checks": [
+      "For study beyond Class XII in an institution notified / empanelled under the scheme.",
+      "The institute list and available slots for 2026–27 are decisive; admission to any college is not enough.",
+      "Confirm the current guideline for eligible courses, fee caps, academic allowance and family restrictions."
+    ]
+  },
+  {
+    "id": "top-obc",
+    "n": "PM-YASASVI Top Class College Education for OBC, EBC and DNT Students",
+    "by": "Ministry of Social Justice & Empowerment",
+    "cat": [
+      "obc",
+      "ebc",
+      "dnt"
+    ],
+    "lvl": [
+      "ug",
+      "pg"
+    ],
+    "income": 250000,
+    "incomeLabel": "Family income up to ₹2.5 lakh/year",
+    "benefit": "Full financial support for eligible prescribed courses in notified institutions, subject to institute-wise slots, course rules and current scheme guidelines.",
+    "source": "https://www.socialjustice.gov.in/writereaddata/UploadFile/36951702274207.pdf",
+    "apply": "https://scholarships.gov.in",
+    "docs": [
+      "OBC / EBC / DNT category certificate as applicable",
+      "Current income certificate",
+      "Admission proof from a notified institution",
+      "Previous examination marksheet",
+      "Bank account details"
+    ],
+    "checks": [
+      "For OBC, EBC and DNT students admitted to a full-time prescribed course in an institution notified for the scheme.",
+      "Family income from all sources must be within ₹2.5 lakh/year under the cited guidelines.",
+      "Awards are limited by institution-wise slots and inter-se merit; eligibility does not guarantee selection.",
+      "Check the 2026–27 institution list and slot allocation before applying."
+    ]
+  },
+  {
+    "id": "st-pms",
+    "n": "Post-Matric Scholarship Scheme for ST Students",
+    "by": "Ministry of Tribal Affairs / State & UT Governments",
+    "cat": [
+      "st"
+    ],
+    "lvl": [
+      "hs",
+      "ug",
+      "diploma",
+      "pg",
+      "phd"
+    ],
+    "income": 250000,
+    "incomeLabel": "Family income ceiling: ₹2.5 lakh/year",
+    "benefit": "Compulsory fees subject to State/UT limits, plus course-dependent maintenance support. The Ministry lists a range of ₹230–₹1,200 per month; actual entitlement depends on course and applicable rules.",
+    "source": "https://tribal.nic.in/Scholarship.aspx",
+    "apply": "https://scholarships.gov.in",
+    "docs": [
+      "ST certificate",
+      "Domicile certificate",
+      "Current income certificate",
+      "Admission / bonafide certificate",
+      "Previous examination marksheet",
+      "Bank account details"
+    ],
+    "checks": [
+      "Confirm your State/UT application route and current-year dates.",
+      "Confirm the course is recognized and the institution is eligible.",
+      "Fee reimbursement limits and maintenance amount depend on applicable rules."
+    ]
+  },
+  {
+    "id": "pmusp",
+    "n": "PM-USP Central Sector Scheme of Scholarship for College and University Students (CSSS)",
+    "by": "Department of Higher Education, Ministry of Education",
+    "cat": [
+      "gen",
+      "obc",
+      "sc",
+      "st",
+      "min",
+      "other"
+    ],
+    "lvl": [
+      "ug",
+      "pg"
+    ],
+    "income": 450000,
+    "incomeLabel": "Family income up to ₹4.5 lakh/year",
+    "benefit": "₹12,000 per year for the first three years of eligible undergraduate study; ₹20,000 per year at eligible later stages, subject to the current guidelines and continuation conditions.",
+    "source": "https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/FAQs_PM_USP2526.pdf",
+    "apply": "https://scholarships.gov.in",
+    "docs": [
+      "Class XII marksheet and board/stream percentile proof",
+      "Current income certificate",
+      "Regular-course admission proof",
+      "Bank account details",
+      "Renewal academic records, if applicable"
+    ],
+    "checks": [
+      "Fresh applicants must be above the 80th percentile of successful Class XII candidates in the relevant stream/board. Marks percentage alone does not prove this.",
+      "Fresh eligibility requires a regular course; correspondence/distance mode and diploma courses are not eligible.",
+      "Fresh applicants who took a drop after Class XII are not eligible under the cited FAQ.",
+      "Applicants must not receive another scholarship or fee reimbursement. Renewal has attendance and academic-performance conditions."
+    ]
+  },
+  {
+    "id": "pwd-pms",
+    "n": "Post-Matric Scholarship for Students with Disabilities",
+    "by": "Department of Empowerment of Persons with Disabilities",
+    "cat": [
+      "gen",
+      "obc",
+      "sc",
+      "st",
+      "min",
+      "other"
+    ],
+    "lvl": [
+      "hs",
+      "ug",
+      "diploma",
+      "pg"
+    ],
+    "income": 250000,
+    "incomeLabel": "Family income up to ₹2.5 lakh/year",
+    "pwd": true,
+    "benefit": "Eligible fees, maintenance and other allowances under the scheme. Exact rates and limits depend on course, accommodation and the current detailed guidelines.",
+    "source": "https://depwd.gov.in/en/scholarship-post-matric/",
+    "apply": "https://scholarships.gov.in",
+    "docs": [
+      "UDID / benchmark disability certificate (40% or more)",
+      "Current income certificate",
+      "Admission proof",
+      "Previous examination marksheet",
+      "Bank account details"
+    ],
+    "checks": [
+      "Benchmark disability of 40% or more is required.",
+      "UDID and the current portal consent / verification steps may be required.",
+      "The student should not receive another post-matric scholarship or stipend.",
+      "Confirm current rates, eligible course and application dates in the detailed guidelines."
+    ]
+  }
+]
