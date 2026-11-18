@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="ScholarSetu is an independent guide to Indian central and state scholarships. Check potential matches and verify eligibility on official portals.">
+<meta name="theme-color" content="#172554">
+<meta name="color-scheme" content="light">
+<title>ScholarSetu | Indian Scholarship Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+<style>
+:root{--ink:#0b1f4b;--text:#27364d;--muted:#566884;--line:#dce2ee;--bg:#f4f6fb;--card:#fff;--soft:#eef1f9;--head:#fff;--brand:#4f2fd0;--brand2:#0b7a6e;--cta1:#d9480f;--cta2:#c2255c;--ok:#0b7a52;--warn:#9a4b00;--gold:#ffc53d;--sh:0 1px 2px rgba(11,31,75,.05),0 10px 28px rgba(11,31,75,.08);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{--ink:#eaf0fb;--text:#c9d4e6;--muted:#92a3bf;--line:#243452;--bg:#0a1325;--card:#111d36;--soft:#17264a;--head:#0d1830;--brand:#9b86ff;--brand2:#3dd1bd;--ok:#4cc38a;--warn:#ffb15c}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;background:radial-gradient(circle at 0 0,rgba(79,47,208,.12),transparent 36%),radial-gradient(circle at 100% 15%,rgba(255,197,61,.14),transparent 30%),var(--bg);background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--head);z-index:101}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.flag{height:6px;background:linear-gradient(90deg,#ff9933 0 33.3%,#fff 33.3% 66.6%,#138808 66.6%)}
+header{background:var(--head);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:100}
+.bar{max-width:1120px;margin:0 auto;padding:.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem;background:none;border:0;cursor:pointer;color:var(--ink);text-align:left}
+.mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--cta1),var(--brand));color:#fff;display:grid;place-items:center;font:700 1.1rem "Source Serif 4",Georgia,serif}
+.brand b{display:block;font:700 1.2rem/1.1 "Source Serif 4",Georgia,serif}
+.brand small{color:var(--muted);font-size:.74rem}
+nav{display:flex;gap:1.4rem;align-items:center;font-size:.9rem}
+nav a{color:var(--text);text-decoration:none;font-weight:500}nav a:hover{color:var(--brand)}
+main{flex:1;max-width:1120px;width:100%;margin:0 auto;padding:2rem 1.25rem 3rem}
+.view{display:none}.view.active{display:block}
+.btn{background:linear-gradient(135deg,var(--cta1),var(--cta2));color:#fff;font:600 .96rem Inter,sans-serif;padding:.8rem 1.6rem;border-radius:10px;border:2px solid transparent;cursor:pointer;box-shadow:0 8px 20px rgba(194,37,92,.28);transition:transform .15s,filter .15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+.btn.out{background:transparent;color:var(--ink);border-color:var(--line);box-shadow:none}.btn.out:hover{border-color:var(--brand)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding:3rem 2.5rem;border-radius:24px;position:relative;overflow:hidden;background:radial-gradient(circle at 90% 8%,rgba(255,197,61,.45),transparent 30%),radial-gradient(circle at 5% 100%,rgba(20,184,166,.4),transparent 38%),linear-gradient(135deg,#14196b 0%,#4f2fd0 58%,#a021c8 100%);margin-bottom:1.5rem}
+.hero::after{content:"";position:absolute;right:-80px;bottom:-80px;width:260px;height:260px;border-radius:50%;background:rgba(255,197,61,.14)}
+.hero>*{position:relative;z-index:1}
+.hero h1{font:700 clamp(2rem,4.5vw,3.1rem)/1.12 "Source Serif 4",Georgia,serif;color:#fff;letter-spacing:-.5px;margin-bottom:1rem;text-wrap:balance}
+.hero p{color:#e3e8ff;font-size:1.08rem;max-width:32em;margin-bottom:1.5rem}
+.hero .note{color:#c9d2ff;font-size:.85rem;margin:1rem 0 0}
+.hero .btn{background:linear-gradient(135deg,var(--gold),#ff9d00);color:#14196b;box-shadow:0 10px 24px rgba(255,157,0,.35)}
+.hero .btn.out{background:transparent;color:#fff;border-color:rgba(255,255,255,.5);box-shadow:none}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.prev{background:var(--card);border-radius:18px;padding:1rem 1.25rem 1.25rem;box-shadow:0 24px 50px rgba(0,0,0,.28);transform:rotate(1.2deg)}
+.illus{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:.8rem}
+.pi{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.pi b{display:block;color:var(--ink);font-size:.92rem;line-height:1.35}.pi span{font-size:.8rem;color:var(--muted)}
+.pi em{font-style:normal;font-weight:700;color:var(--ok);font-size:.82rem;text-align:right}
+.trust{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1.5rem}
+.trust span{display:flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;font-size:.85rem}
+.trust svg{width:17px;height:17px;flex:none;color:var(--brand2)}
+.band{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2.5rem}
+.band div{border-radius:16px;padding:1.15rem;color:#fff;font-size:.85rem;display:flex;gap:.8rem;align-items:center;box-shadow:0 10px 24px rgba(0,0,0,.14)}
+.band svg{width:38px;height:38px;flex:none}.band b{display:block;font:700 1.45rem/1.1 "Source Serif 4",Georgia,serif}
+.band div:nth-child(1){background:#5b3be0}.band div:nth-child(2){background:#0b7a6e}.band div:nth-child(3){background:#c2255c}.band div:nth-child(4){background:#a24a00}
+.how h2,.rh h2,.about h2{font:700 1.7rem "Source Serif 4",Georgia,serif;color:var(--ink);margin-bottom:1rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.steps div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:16px;padding:1.4rem;box-shadow:var(--sh)}
+.steps div:nth-child(2){border-top-color:var(--brand2)}.steps div:nth-child(3){border-top-color:var(--cta2)}
+.steps i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--card);font:600 .85rem Inter;font-style:normal;margin-bottom:.8rem}
+.steps h3{font-size:1.05rem;color:var(--ink);margin-bottom:.3rem}.steps p{font-size:.92rem;color:var(--muted)}
+.wiz{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh);max-width:700px;margin:1rem auto;overflow:hidden}
+.wh{background:linear-gradient(135deg,#4f2fd0,#0b7a6e);padding:1.4rem 2rem 1.2rem;color:#fff}
+.meter{height:7px;background:rgba(255,255,255,.28);border-radius:7px;overflow:hidden}.meter div{height:100%;background:var(--gold);width:25%;transition:width .3s}
+.wc{font-size:.84rem;margin-top:.6rem;color:#e6eaff}
+.wb2{padding:1.5rem 2rem 2rem}
+.step{display:none}.step.on{display:block}
+.step h3{font:700 1.5rem "Source Serif 4",Georgia,serif;color:var(--ink);margin-bottom:.3rem}
+.step>p{color:var(--muted);font-size:.95rem;margin-bottom:1.4rem}
+.fg{margin-bottom:1.15rem}
+label{display:block;font-weight:600;margin-bottom:.4rem;font-size:.9rem;color:var(--ink)}
+.hint{display:block;color:var(--muted);font-size:.82rem;font-weight:400;margin:-.15rem 0 .5rem}
+select,input[type=number],input[type=text],input:not([type]){width:100%;padding:.75rem .9rem;border:1.5px solid var(--line);border-radius:10px;font:1rem Inter,sans-serif;color:var(--text);background:var(--card)}
+select:focus,input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(79,47,208,.18)}
+.chk{display:flex;align-items:center;gap:.6rem;font-weight:400;cursor:pointer;color:var(--text)}
+.chk input{width:18px;height:18px;accent-color:var(--brand)}
+.err{color:#c62828;font-size:.88rem;min-height:1.3em}
+@media(prefers-color-scheme:dark){.err{color:#ff8a80}}
+.nav2{display:flex;justify-content:space-between;margin-top:1rem}
+.rh{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:1.1rem}
+.rh h2{margin-bottom:.2rem}.rh p{color:var(--muted);font-size:.93rem}
+.rb{display:flex;gap:.6rem;flex-wrap:wrap}
+.flow{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.flow span{background:rgba(194,37,92,.1);border-radius:999px;padding:.3rem .95rem;font-size:.84rem;color:var(--ink)}.flow b{color:var(--cta2);margin-right:.35rem}
+.warn,.official-checker{border-radius:12px;padding:.8rem 1rem;font-size:.88rem;margin-bottom:1rem;line-height:1.65}
+.warn{background:rgba(255,197,61,.2);border-left:5px solid var(--gold);color:var(--text)}
+.official-checker{background:rgba(79,47,208,.1);border-left:5px solid var(--brand);color:var(--text)}
+.official-checker a{color:var(--brand);font-weight:700}
+.layout{display:grid;grid-template-columns:1fr 330px;gap:1.5rem;align-items:start}
+.list{display:grid;gap:1.1rem}
+.sec{font:700 1.2rem "Source Serif 4",Georgia,serif;color:var(--ink);border-left:5px solid var(--cta2);padding-left:.7rem;margin-top:.4rem}
+.scheme-meta{font-size:.82rem;color:var(--muted)}
+.sc{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:18px;padding:1.35rem 1.5rem;box-shadow:var(--sh);display:grid;gap:.5rem;transition:transform .2s}
+.sc:hover{transform:translateY(-2px)}
+.sc:nth-child(3n+1){border-top-color:var(--brand)}.sc:nth-child(3n+2){border-top-color:var(--cta2)}.sc:nth-child(3n){border-top-color:var(--brand2)}
+.sc h4{font-size:1.05rem;color:var(--ink);line-height:1.4}
+.sc .by{font-size:.82rem;color:var(--muted)}
+.sc .amt{background:rgba(11,122,82,.1);color:var(--ok);border-radius:10px;padding:.6rem .8rem;font-size:.9rem;font-weight:600;line-height:1.45}
+.sc>.tag{justify-self:start;font-weight:700;padding:.2rem .85rem}
+.tag{display:inline-block;background:var(--soft);border-radius:999px;padding:.15rem .75rem;font-size:.78rem;margin:0 .35rem .35rem 0;color:var(--text)}
+.tag.ok{background:rgba(11,122,82,.14);color:var(--ok)}.tag.cond{background:rgba(217,119,6,.16);color:var(--warn)}
+.scheme-detail{font-size:.9rem;color:var(--text)}
+details{border:1px solid var(--line);border-radius:12px;padding:.6rem .9rem;background:var(--soft)}
+summary{cursor:pointer;font-weight:600;color:var(--ink);font-size:.9rem}
+details[open] summary{margin-bottom:.4rem}details p{font-size:.88rem;margin:.3rem 0;color:var(--text)}
+.row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.7rem;margin-top:.4rem;padding-top:.8rem;border-top:1px solid var(--line);font-size:.86rem}
+.scheme-links{font-weight:600}.sc a,.stc a{color:var(--brand);text-decoration:underline;text-underline-offset:3px}
+.st{border-top-color:var(--brand2)}
+.dc{display:block}.ck{list-style:none;display:grid;gap:.45rem}.ck .chk{padding:.2rem 0}
+.excluded{opacity:.9}
+.empty{background:var(--card);border:1.5px dashed var(--line);border-radius:16px;padding:2rem;text-align:center;color:var(--muted)}
+.cop{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--cta2);border-radius:18px;box-shadow:var(--sh);padding:1.25rem;position:sticky;top:calc(5.5rem + env(safe-area-inset-top,0px))}
+.cop h3{color:var(--ink);font-size:1.05rem}.cop>p{color:var(--muted);font-size:.84rem;margin:.2rem 0 .8rem}
+.log{max-height:250px;overflow-y:auto;display:grid;gap:.5rem;margin-bottom:.8rem}
+.msg{padding:.6rem .8rem;border-radius:12px;font-size:.87rem;background:var(--soft);color:var(--text)}
+.msg.me{background:linear-gradient(135deg,#4f2fd0,#a021c8);color:#fff;justify-self:end}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chips button{background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:.3rem .8rem;font-size:.8rem;cursor:pointer}.chips button:hover{border-color:var(--brand)}
+.ask{display:flex;gap:.4rem;margin-top:.8rem}.ask input{flex:1;min-width:0;padding:.5rem .7rem;font-size:.85rem}.ask .btn{padding:.5rem .9rem;font-size:.85rem}
+.sfin{width:100%;max-width:360px;margin:.4rem 0 1.25rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.9rem}
+.stc{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--brand2);border-radius:14px;padding:1rem 1.1rem;box-shadow:var(--sh)}
+.stc:nth-child(4n+1){border-top-color:var(--brand)}.stc:nth-child(4n+2){border-top-color:var(--cta2)}.stc:nth-child(4n+3){border-top-color:var(--gold)}
+.stc b{display:block;color:var(--ink)}.stc span{font-size:.84rem;color:var(--muted)}
+.about{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:2rem;max-width:760px}.about p{margin-bottom:.7rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);background:var(--head);color:var(--muted);font-size:.82rem;padding:1.35rem 1rem;text-align:center;line-height:1.7}
+.mcta{display:none}
+@media(max-width:860px){.hero,.layout,.steps{grid-template-columns:1fr}.hero{padding:2rem 1.25rem}.prev{transform:none}nav a{display:none}.cop{position:static}.band{grid-template-columns:1fr 1fr}.wh,.wb2{padding-left:1.25rem;padding-right:1.25rem}.rb{width:100%}.rb .btn,.nav2 .btn{flex:1}.mcta{display:block;position:fixed;left:1rem;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:90}.mcta .btn{width:100%;box-shadow:0 12px 30px rgba(0,0,0,.35)}main{padding-bottom:6rem}}
+@media print{header,.flag,.cta,.cop,.rb,.nav2,.btn,.sfin,footer,.mcta{display:none!important}body{background:#fff;color:#111}.view{display:none!important}#v-results{display:block!important}.sc,.warn{break-inside:avoid;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="flag"></div>
+<header><div class="bar">
+  <button class="brand" onclick="go('home')" aria-label="ScholarSetu home"><span class="mark">सेतु</span><span><b>ScholarSetu</b><small>Government scholarship finder</small></span></button>
+  <nav aria-label="Main navigation"><a href="#" onclick="go('home');return false">Home</a><a href="#" onclick="go('home');document.getElementById('how').scrollIntoView();return false">How it works</a><a href="#" onclick="go('states');return false">State portals</a><button class="btn" onclick="go('wizard')">Check eligibility</button></nav>
+</div></header>
+<main>
+<section class="view active" id="v-home">
+  <div class="hero">
+    <div>
+      <h1>Find scholarships worth checking — without the guesswork</h1>
+      <p>Answer a few questions to find relevant central schemes and your State/UT portal. See why each scheme may fit, what still needs checking, and where to verify the official rules.</p>
+      <div class="cta"><button class="btn" onclick="go('wizard')">Check my eligibility</button><button class="btn out" onclick="go('states')">Browse state portals</button></div>
+      <p class="note">Free to use · No sign-up · Your answers stay in this browser</p>
+    </div>
+    <div class="prev" aria-label="Example matches">
+      <svg class="illus" viewBox="0 0 320 160" role="img" aria-label="Graduation cap resting on a stack of books"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d4ad6"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs><rect width="320" height="160" rx="12" fill="url(#g)"/><circle cx="262" cy="42" r="40" fill="#ffb020" opacity=".25"/><circle cx="262" cy="42" r="26" fill="#ffb020"/><circle cx="40" cy="34" r="3" fill="#fff"/><circle cx="68" cy="20" r="2" fill="#fff"/><circle cx="290" cy="110" r="3" fill="#fff"/><rect x="62" y="126" width="160" height="18" rx="3" fill="#fff"/><rect x="72" y="108" width="140" height="18" rx="3" fill="#e5484d"/><rect x="82" y="90" width="120" height="18" rx="3" fill="#ffb020"/><path d="M104 70v18c0 8 76 8 76 0V70l-38 14z" fill="#1d2f6f"/><polygon points="142,32 214,58 142,84 70,58" fill="#0b1b3f"/><line x1="206" y1="61" x2="206" y2="92" stroke="#ffb020" stroke-width="3"/><circle cx="206" cy="95" r="5" fill="#ffb020"/></svg><h5>Illustrative schemes — not a promise of eligibility</h5>
+      <div class="pi"><div><b>Post-Matric Scholarship for SC Students</b><span>Fees + course-based academic allowance</span></div><em>Varies</em></div>
+      <div class="pi"><div><b>PM-USP Central Sector Scholarship</b><span>Department of Higher Education</span></div><em>Course-stage based</em></div>
+      <div class="pi"><div><b>Post-Matric Scholarship for Students with Disabilities</b><span>DEPwD · benchmark disability required</span></div><em>Varies</em></div>
+    </div>
+  </div>
+  <div class="trust"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Every scheme links to its official guideline</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>Your answers stay in your browser</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>Independent guide, not a government site</span></div>
+  <div class="band"><div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 10l9-5 9 5-9 5z"/><path d="M7 12.5V17c0 1.5 10 1.5 10 0v-4.5"/></svg><span><b>6</b>central schemes screened</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>2 min</b>to get your matches</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><b>36</b>states and UTs</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M6 9a3 3 0 106 0 3 3 0 10-6 0M3 20c0-3 3-5 6-5s6 2 6 5M16 5a3 3 0 010 6M18 15c2 .6 3 2.3 3 5"/></svg><span><b>Free</b>no sign-up needed</span></div></div>
+  <div class="how" id="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div><i>1</i><h3>Tell us about you</h3><p>State of domicile, category and disability status.</p></div>
+      <div><i>2</i><h3>Share your studies</h3><p>Your current level and last exam marks.</p></div>
+      <div><i>3</i><h3>Get your matches</h3><p>See eligible schemes, the documents you need and where to apply.</p></div>
+    </div>
+  </div>
+<div class="mcta"><button class="btn" onclick="go(\'wizard\')">Check my eligibility</button></div></section>
+
+<section class="view" id="v-wizard">
+  <div class="wiz">
+    <div class="wh"><div class="meter"><div id="mt"></div></div><p class="wc" id="wc">Step 1 of 4</p></div>
+    <div class="wb2">
+    <div class="step on" data-s="1">
+      <h3>About you</h3><p>These details help narrow down schemes. Choose the category shown on your valid certificate, if applicable.</p>
+      <div class="fg"><label for="state">State or Union Territory of domicile</label><select id="state" required></select></div>
+      <div class="fg"><label for="cat">Social category</label><select id="cat" required><option value="">Select category</option><option value="gen">General</option><option value="obc">OBC</option><option value="ebc">Economically Backward Class (EBC)</option><option value="dnt">Denotified / Nomadic Tribe (DNT)</option><option value="sc">Scheduled Caste (SC)</option><option value="st">Scheduled Tribe (ST)</option><option value="min">Minority community</option><option value="other">Other / prefer not to say</option></select></div>
+      <label class="chk"><input type="checkbox" id="pwd"> I have a benchmark disability (40% or more)</label>
+    </div>
+    <div class="step" data-s="2">
+      <h3>Your studies</h3><p>Course level and study mode can change eligibility. Choose your current course, not the one you plan to join later.</p>
+      <div class="fg"><label for="lvl">Current level</label><select id="lvl" required><option value="">Select level</option><option value="sec">Class 9–10</option><option value="hs">Class 11–12</option><option value="ug">Undergraduate degree</option><option value="diploma">Diploma / professional course</option><option value="pg">Postgraduate</option><option value="phd">PhD / research</option></select></div>
+      <div class="fg"><label for="mode">Study mode</label><select id="mode"><option value="regular">Regular / full-time</option><option value="distance">Distance / correspondence / online</option><option value="unknown">Not sure</option></select></div>
+      <div class="fg"><label for="applicant">Application type</label><select id="applicant"><option value="fresh">Fresh applicant</option><option value="renewal">Renewal / continuing award</option><option value="unknown">Not sure</option></select></div>
+      <div class="fg"><label for="hostel">Accommodation</label><select id="hostel"><option value="unknown">Not sure / not applicable</option><option value="hosteller">Hosteller</option><option value="day">Day scholar</option></select></div>
+      <div class="fg"><label for="marks">Marks in last exam (%) — optional, for reference only</label><input type="number" id="marks" min="0" max="100" step="0.01" placeholder="e.g. 78"></div>
+    </div>
+    <div class="step" data-s="3">
+      <h3>Scheme-specific checks</h3><p>These answers help identify obvious conflicts. “Not sure” keeps a scheme as a conditional lead rather than rejecting it.</p>
+      <div class="fg"><label for="percentile">For PM-USP only: were you above the 80th percentile in your Class XII board/stream?</label><small class="hint">Above the 80th percentile means you scored higher than 80% of the students who passed in your board and stream. Not sure? Choose “I don’t know” and we will keep the scheme as something to check.</small><select id="percentile"><option value="unknown">I don't know / need to check the board cut-off</option><option value="yes">Yes, above the 80th percentile</option><option value="no">No</option></select></div>
+      <div class="fg"><label for="otherbenefit">Are you receiving another scholarship, stipend or fee reimbursement?</label><small class="hint">For example a state scholarship, a fee waiver, or a stipend from your school or college.</small><select id="otherbenefit"><option value="unknown">Not sure / prefer to verify</option><option value="no">No</option><option value="yes">Yes</option></select></div>
+      <div class="fg"><label for="gap">Did you take a gap/drop after Class XII before starting your current degree?</label><small class="hint">A gap or drop means a year or more between finishing Class XII and starting your current degree, for example while preparing for entrance exams.</small><select id="gap"><option value="unknown">Not sure / not applicable</option><option value="no">No</option><option value="yes">Yes</option></select></div>
+    </div>
+    <div class="step" data-s="4">
+      <h3>Family income</h3><p>Enter the combined annual income of your parents/guardians. Leave it blank if you do not know; schemes with income limits will be marked “check first”.</p>
+      <div class="fg"><label for="inc">Annual family income (₹)</label><input type="number" id="inc" min="0" step="1000" placeholder="e.g. 250000"></div>
+    </div>
+    <div class="err" id="err" role="alert"></div>
+    <div class="nav2"><button class="btn out" id="back">Back</button><button class="btn" id="next">Continue</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="v-states">
+  <div class="rh"><div><h2>State scholarship portals</h2><p>State and Union Territory scholarship pages and application portals. Where a dedicated portal is not listed, open the National Scholarship Portal.</p></div><button class="btn out" onclick="go(ans.state?'results':'home')">Go back</button></div>
+  <label class="sr-only" for="sf">Search states and portal names</label><input class="sfin" id="sf" placeholder="Search your state" aria-label="Search states" oninput="drawStates()">
+  <div class="sgrid" id="sg"></div>
+  <p class="warn" style="margin-top:1.25rem">Some entries link to a department information page rather than a dedicated application form. Portal destinations are directory leads, not individually verified application flows. Check the academic year and scheme notice on the destination site; if a link fails, start at scholarships.gov.in.</p>
+</section>
+
+<section class="view" id="v-results">
+  <div class="rh"><div><h2 id="rt">Your matches</h2><p id="rs"></p></div><div class="rb"><button class="btn out" onclick="go('wizard')">Edit answers</button><button class="btn" id="cp">Copy results</button><button class="btn out" id="print">Print / save PDF</button></div></div>
+  <div class="flow"><span><b>1</b>Review potential matches</span><span><b>2</b>Check scheme-specific rules</span><span><b>3</b>Apply only on official portals</span></div>
+  <p class="warn"><strong>Important:</strong> This is a preliminary shortlist, not an eligibility decision. Some schemes require details this checker does not collect (such as board percentile, course group, institute approval, hosteller status or other scholarship benefits). Open each official guideline and confirm the current 2026–27 rules before applying.</p>
+  <p class="official-checker"><strong>Government verification:</strong> <a href="https://scholarships.gov.in/scholarshipEligibility/" target="_blank" rel="noopener noreferrer">Use the National Scholarship Portal eligibility checker</a> for the live scheme list and application dates.</p>
+  <div class="layout">
+    <div class="list" id="list" aria-live="polite" aria-busy="false"></div>
+    <aside class="cop">
+      <h3>Scholarship copilot</h3><p>Answers come from the matches on this page.</p>
+      <div class="log" id="log" aria-live="polite"></div>
+      <div class="chips" id="chips"></div>
+      <div class="ask"><input id="q" placeholder="Type a question" aria-label="Ask the copilot"><button class="btn" id="go">Ask</button></div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer><strong>ScholarSetu is an independent student guide.</strong> It is not operated by or affiliated with the Government of India or any State Government. Confirm current scheme guidelines, dates and application status on official portals. Never pay an agent or share your OTP/password.</footer>
+
+<script>
+'use strict';
+const STATES=["Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Andaman and Nicobar Islands","Chandigarh","Dadra and Nagar Haveli and Daman and Diu","Delhi","Jammu and Kashmir","Ladakh","Lakshadweep","Puducherry"];
+const $=id=>document.getElementById(id);
+const NSP='https://scholarships.gov.in';
+const YEAR='2026–27';
+const DATA_DATE='16 November 2026';
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const option=(label,value)=>{const o=document.createElement('option');o.value=value;o.textContent=label;return o};
+const stateSelect=$('state');stateSelect.append(option('Select your state or UT',''));
+const g1=document.createElement('optgroup');g1.label='States';const g2=document.createElement('optgroup');g2.label='Union Territories';
+STATES.forEach((st,i)=>(i<28?g1:g2).append(option(st,st)));stateSelect.append(g1,g2);
+const S=[
+ {id:'sc-pms',n:'Post-Matric Scholarship for SC Students (PMS-SC)',by:'Ministry of Social Justice & Empowerment',cat:['sc'],lvl:['hs','ug','diploma','pg','phd'],income:250000,incomeLabel:'Published family-income ceiling: ₹2.5 lakh/year; verify current State/UT notification',benefit:'Compulsory non-refundable fees plus academic allowance. The allowance varies by course group and hosteller/day-scholar status; do not assume a fixed amount.',source:'https://socialjustice.gov.in/writereaddata/UploadFile/PMS_for_SCs_Scheme_Guidelines.pdf',apply:NSP,docs:['SC caste certificate','Domicile certificate','Current income certificate','Admission / bonafide certificate','Previous examination marksheet','Bank account details'] ,checks:['Confirm the current-year income ceiling and State/UT implementation rules.','Check that your institution and course are covered and correctly mapped on the portal.','Course group and hosteller/day-scholar status affect the admissible amount.']},
+ {id:'top-sc',n:'Central Sector Scholarship of Top Class Education for SC Students',by:'Ministry of Social Justice & Empowerment',cat:['sc'],lvl:['ug','pg'],income:800000,incomeLabel:'Family income up to ₹8 lakh/year',benefit:'Eligible tuition fee and non-refundable charges, plus academic allowance under the 2026–27 scheme guidelines. Private-institution fee caps and notified-institution rules apply; check the current guideline before relying on any amount.',source:'https://socialjustice.gov.in/schemes/27',apply:NSP,docs:['SC caste certificate','Current income certificate','Admission proof from a notified / empanelled institution','Previous examination marksheet','Bank account details'],checks:['For study beyond Class XII in an institution notified / empanelled under the scheme.','The institute list and available slots for 2026–27 are decisive; admission to any college is not enough.','Confirm the current guideline for eligible courses, fee caps, academic allowance and family restrictions.']},
+ {id:'top-obc',n:'PM-YASASVI Top Class College Education for OBC, EBC and DNT Students',by:'Ministry of Social Justice & Empowerment',cat:['obc','ebc','dnt'],lvl:['ug','pg'],income:250000,incomeLabel:'Family income up to ₹2.5 lakh/year',benefit:'Full financial support for eligible prescribed courses in notified institutions, subject to institute-wise slots, course rules and current scheme guidelines.',source:'https://www.socialjustice.gov.in/writereaddata/UploadFile/36951702274207.pdf',apply:NSP,docs:['OBC / EBC / DNT category certificate as applicable','Current income certificate','Admission proof from a notified institution','Previous examination marksheet','Bank account details'],checks:['For OBC, EBC and DNT students admitted to a full-time prescribed course in an institution notified for the scheme.','Family income from all sources must be within ₹2.5 lakh/year under the cited guidelines.','Awards are limited by institution-wise slots and inter-se merit; eligibility does not guarantee selection.','Check the 2026–27 institution list and slot allocation before applying.']},
+ {id:'st-pms',n:'Post-Matric Scholarship Scheme for ST Students',by:'Ministry of Tribal Affairs / State & UT Governments',cat:['st'],lvl:['hs','ug','diploma','pg','phd'],income:250000,incomeLabel:'Family income ceiling: ₹2.5 lakh/year',benefit:'Compulsory fees subject to State/UT limits, plus course-dependent maintenance support. The Ministry lists a range of ₹230–₹1,200 per month; actual entitlement depends on course and applicable rules.',source:'https://tribal.nic.in/Scholarship.aspx',apply:NSP,docs:['ST certificate','Domicile certificate','Current income certificate','Admission / bonafide certificate','Previous examination marksheet','Bank account details'],checks:['Confirm your State/UT application route and current-year dates.','Confirm the course is recognized and the institution is eligible.','Fee reimbursement limits and maintenance amount depend on applicable rules.']},
+ {id:'pmusp',n:'PM-USP Central Sector Scheme of Scholarship for College and University Students (CSSS)',by:'Department of Higher Education, Ministry of Education',cat:['gen','obc','sc','st','min','other'],lvl:['ug','pg'],income:450000,incomeLabel:'Family income up to ₹4.5 lakh/year',benefit:'₹12,000 per year for the first three years of eligible undergraduate study; ₹20,000 per year at eligible later stages, subject to the current guidelines and continuation conditions.',source:'https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/FAQs_PM_USP2526.pdf',apply:NSP,docs:['Class XII marksheet and board/stream percentile proof','Current income certificate','Regular-course admission proof','Bank account details','Renewal academic records, if applicable'],checks:['Fresh applicants must be above the 80th percentile of successful Class XII candidates in the relevant stream/board. Marks percentage alone does not prove this.','Fresh eligibility requires a regular course; correspondence/distance mode and diploma courses are not eligible.','Fresh applicants who took a drop after Class XII are not eligible under the cited FAQ.','Applicants must not receive another scholarship or fee reimbursement. Renewal has attendance and academic-performance conditions.']},
+ {id:'pwd-pms',n:'Post-Matric Scholarship for Students with Disabilities',by:'Department of Empowerment of Persons with Disabilities',cat:['gen','obc','sc','st','min','other'],lvl:['hs','ug','diploma','pg'],income:250000,incomeLabel:'Family income up to ₹2.5 lakh/year',pwd:true,benefit:'Eligible fees, maintenance and other allowances under the scheme. Exact rates and limits depend on course, accommodation and the current detailed guidelines.',source:'https://depwd.gov.in/en/scholarship-post-matric/',apply:NSP,docs:['UDID / benchmark disability certificate (40% or more)','Current income certificate','Admission proof','Previous examination marksheet','Bank account details'],checks:['Benchmark disability of 40% or more is required.','UDID and the current portal consent / verification steps may be required.','The student should not receive another post-matric scholarship or stipend.','Confirm current rates, eligible course and application dates in the detailed guidelines.']}
+];
+const P=[['Andhra Pradesh','Jnanabhumi / AP scholarship portal','https://jnanabhumi.ap.gov.in/'],['Delhi','e-District Delhi','https://edistrict.delhigovt.nic.in/'],['Arunachal Pradesh','Department of Education scholarship information','https://education.arunachal.gov.in/'],['Assam','Directorate of Higher Education, Assam','https://directorateofhighereducation.assam.gov.in/portlets/scholarships'],['Bihar','Post-Matric Scholarship Online','https://www.pmsonline.bih.nic.in/'],['Chhattisgarh','Post-Matric Scholarship Portal','https://postmatric-scholarship.cg.nic.in/'],['Goa','CM Scholarship Portal','https://cmscholarship.goa.gov.in/'],['Gujarat','Digital Gujarat','https://www.digitalgujarat.gov.in/'],['Haryana','Har-Chhatravratti','https://harchhatravratti.highereduhry.ac.in/'],['Himachal Pradesh','HP ePASS','https://www.hpepass.cgg.gov.in/'],['Jharkhand','e-Kalyan','https://ekalyan.cgg.gov.in/'],['Karnataka','State Scholarship Portal','https://ssp.postmatric.karnataka.gov.in/'],['Kerala','DCE Scholarship Portal','https://dcescholarship.kerala.gov.in/'],['Madhya Pradesh','MP Scholarship Portal','http://www.scholarshipportal.mp.nic.in/'],['Maharashtra','MahaDBT','https://mahadbt.maharashtra.gov.in/'],['Manipur','Government of Manipur','https://manipur.gov.in/'],['Meghalaya','Government of Meghalaya','https://meghalaya.gov.in/'],['Mizoram','Government of Mizoram','https://mizoram.gov.in/'],['Nagaland','Department of Higher Education','https://highereducation.nagaland.gov.in/'],['Odisha','Odisha State Scholarship Portal','https://scholarship.odisha.gov.in/'],['Punjab','Dr. Ambedkar Scholarship Portal','https://scholarships.punjab.gov.in/'],['Rajasthan','Social Justice & Empowerment Department','https://sje.rajasthan.gov.in/'],['Sikkim','Government of Sikkim','https://sikkim.gov.in/'],['Tamil Nadu','Tamil Nadu Government','https://www.tn.gov.in/'],['Telangana','Telangana ePASS','https://telanganaepass.cgg.gov.in/'],['Tripura','Government of Tripura','https://tripura.gov.in/'],['Uttar Pradesh','UP Scholarship Portal','https://scholarship.up.gov.in/'],['Uttarakhand','Department of Higher Education','https://he.uk.gov.in/'],['West Bengal','OASIS Scholarship Portal','https://oasis.gov.in/'],['Andaman and Nicobar Islands','National Scholarship Portal','https://scholarships.gov.in/'],['Chandigarh','National Scholarship Portal','https://scholarships.gov.in/'],['Dadra and Nagar Haveli and Daman and Diu','National Scholarship Portal','https://scholarships.gov.in/'],['Jammu and Kashmir','National Scholarship Portal','https://scholarships.gov.in/'],['Ladakh','National Scholarship Portal','https://scholarships.gov.in/'],['Lakshadweep','National Scholarship Portal','https://scholarships.gov.in/'],['Puducherry','National Scholarship Portal','https://scholarships.gov.in/']].map(([s,n,u])=>({s,n,u}));
+const pf=s=>P.find(p=>p.s===s)||{s,n:'National Scholarship Portal',u:NSP};
+function go(v){if(v==='states')drawStates();document.querySelectorAll('.view').forEach(e=>e.classList.toggle('active',e.id==='v-'+v));window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+let step=1,ans={},matches=[];
+function show(n){step=n;document.querySelectorAll('.step').forEach(e=>e.classList.toggle('on',Number(e.dataset.s)===n));$('mt').style.width=(n/4*100)+'%';$('wc').textContent=`Step ${n} of 4`; $('back').style.visibility=n===1?'hidden':'visible';$('next').textContent=n===4?'Find potential matches':'Continue';$('err').textContent='';}
+function validate(){if(step===1&&(!$('state').value||!$('cat').value))return'Please select your domicile and social category.';if(step===2&&!$('lvl').value)return'Please select your current education level.';if($('marks').value!==''&&(!Number.isFinite(+$('marks').value)||+$('marks').value<0||+$('marks').value>100))return'Enter marks between 0 and 100, or leave this optional field blank.';if(step===4&&$('inc').value!==''&&(!Number.isFinite(+$('inc').value)||+$('inc').value<0))return'Enter a valid non-negative annual family income, or leave it blank.';return'';}
+$('back').addEventListener('click',()=>show(Math.max(1,step-1)));
+$('next').addEventListener('click',()=>{const e=validate();if(e){$('err').textContent=e;return;}if(step<4){show(step+1);return;}ans={state:$('state').value,cat:$('cat').value,pwd:$('pwd').checked,lvl:$('lvl').value,mode:$('mode').value,applicant:$('applicant').value,hostel:$('hostel').value,marks:$('marks').value===''?null:+$('marks').value,percentile:$('percentile').value,other:$('otherbenefit').value,gap:$('gap').value,inc:$('inc').value===''?null:+$('inc').value};run();go('results');});
+function f(n){return '₹'+Number(n).toLocaleString('en-IN');}
+function evaluate(s){let reasons=[],warnings=[],excluded=[];
+ if(!s.cat.includes(ans.cat))excluded.push('Your selected social category does not match this scheme’s category scope.');
+ if(!s.lvl.includes(ans.lvl))excluded.push('Your current study level is outside the listed course levels.');
+ if(s.pwd&&!ans.pwd)excluded.push('This scheme requires benchmark disability of 40% or more.');
+ if(s.income!==undefined){if(ans.inc!==null&&ans.inc>s.income)excluded.push(`Your entered family income is above the published ceiling of ${f(s.income)}.`);else if(ans.inc===null)warnings.push(`Income not entered — check the ${f(s.income)} annual ceiling before applying.`);else reasons.push('Entered income is within the published ceiling.');}
+ if(s.id==='pmusp'){
+   if(ans.mode==='distance')excluded.push('The cited PM-USP fresh criteria require a regular course, not distance/correspondence study.');
+   else if(ans.mode==='unknown')warnings.push('Confirm that your course is regular/full-time.');
+   if(ans.lvl==='pg'&&ans.applicant!=='renewal')excluded.push('At postgraduate level, this shortlist treats PM-USP as a continuation/renewal lead, not a fresh application.');
+   if(ans.percentile==='no'&&ans.applicant==='fresh')excluded.push('You indicated you were not above the 80th percentile required for fresh selection.');
+   if(ans.percentile==='unknown'&&ans.applicant==='fresh')warnings.push('Check the official board- and stream-specific 80th-percentile cut-off; marks percentage is not a substitute.');
+   if(ans.other==='yes')excluded.push('The cited PM-USP criteria do not allow another scholarship or fee reimbursement.');
+   if(ans.other==='unknown')warnings.push('Confirm that you are not receiving another scholarship or fee reimbursement.');
+   if(ans.gap==='yes'&&ans.applicant==='fresh')excluded.push('The cited fresh-application FAQ excludes students who took a drop after Class XII.');
+   if(ans.gap==='unknown'&&ans.applicant==='fresh')warnings.push('Confirm whether a gap/drop after Class XII affects your fresh-application eligibility.');
+   if(ans.applicant==='unknown')warnings.push('Confirm whether you qualify as a fresh applicant or renewal candidate.');
+ }
+ if(s.id==='pwd-pms'&&ans.other==='yes')excluded.push('The scheme page states that another post-matric scholarship or stipend cannot be received concurrently.');
+ if(s.id==='pwd-pms'&&ans.other==='unknown')warnings.push('Confirm the restriction on receiving another post-matric scholarship or stipend.');
+ if(s.id==='sc-pms')warnings.push('Confirm the current-year SC scheme income ceiling and State/UT implementation notice.');
+ if(s.id==='top-sc')warnings.push('The Ministry’s notified institution list and available slots for 2026–27 are essential checks.');
+ if(s.id==='top-obc')warnings.push('The notified college list and institution-wise slots determine whether this scheme is available at your institution.');
+ if(s.id==='st-pms')warnings.push('Confirm the State/UT application route, course recognition and current-year dates.');
+ if(ans.hostel==='unknown'&&['sc-pms','st-pms','pwd-pms'].includes(s.id))warnings.push('Hosteller/day-scholar status may change the amount payable.');
+ if(s.id==='pmusp'&&ans.applicant==='renewal')warnings.push('For renewal, verify the current minimum marks, attendance and continuation conditions in the official FAQ/guidelines.');
+ if(!excluded.length)reasons.unshift('Your broad profile passes the checks available in this guide.');
+ return {s,reasons,warnings,excluded,status:excluded.length?'Not matched on entered answers':warnings.length?'Conditional — verify details':'Potential match'};
+}
+function run(){matches=S.map(evaluate).filter(x=>!x.excluded.length).sort((a,b)=>(a.warnings.length-b.warnings.length));const excluded=S.map(evaluate).filter(x=>x.excluded.length);
+ $('rt').textContent=matches.length?`${matches.length} potential scheme${matches.length===1?'':'s'} to review`:'No matches in this limited central-scheme shortlist';
+ $('rs').textContent=`${ans.state} domicile · ${$('lvl').selectedOptions[0].textContent} · ${ans.inc===null?'income not entered':`income ${f(ans.inc)}`} · ${YEAR}`;
+ const intro=document.createElement('div');intro.className='warn';intro.innerHTML='<strong>How to read these results:</strong> “Potential match” means no disqualifying answer was found in the limited checks this guide supports. “Conditional” means you must verify missing information. Neither status confirms eligibility or guarantees payment.';
+ const checker=document.createElement('p');checker.className='official-checker';checker.innerHTML=`<strong>Live government check:</strong> <a href="${NSP}/Students" target="_blank" rel="noopener noreferrer">National Scholarship Portal</a> · <a href="${NSP}/All-Scholarships" target="_blank" rel="noopener noreferrer">Browse current scheme list</a> · <a href="${NSP}/studentFAQs" target="_blank" rel="noopener noreferrer">Student FAQs / OTR</a><br>NSP states that One Time Registration (OTR) is required to apply. Check the portal for the current OTR process and the live application / verification dates.`;
+ $('list').replaceChildren(intro,checker);
+ const meta=document.createElement('p');meta.className='scheme-meta';meta.textContent=`Scheme references reviewed ${DATA_DATE}. Portal dates change during the year; this file does not automatically fetch deadlines or submit applications.`;$('list').append(meta);
+ if(matches.length){const h=document.createElement('h3');h.className='sec';h.textContent='Potential central schemes';$('list').append(h);matches.forEach(x=>$('list').append(card(x)));}
+ else{const e=document.createElement('div');e.className='empty';e.textContent='No scheme in this small central shortlist passed the checks. This does not mean you are ineligible for all scholarships. Check your State/UT portal, NSP and institution-level scholarships.';$('list').append(e);}
+ if(excluded.length){const details=document.createElement('details');details.className='excluded';const summary=document.createElement('summary');summary.textContent=`Why the other ${excluded.length} shortlisted scheme${excluded.length===1?' was':'s were'} not shown`;details.append(summary);excluded.forEach(x=>{const p=document.createElement('p');p.textContent=`${x.s.n}: ${x.excluded.join(' ')}`;details.append(p);});$('list').append(details);}
+ const stateHead=document.createElement('h3');stateHead.className='sec';stateHead.textContent=`State / UT scholarships for ${ans.state}`;$('list').append(stateHead);
+ const sp=pf(ans.state),st=document.createElement('article');st.className='sc st';st.innerHTML=`<h4>${esc(sp.n)}</h4><p class="scheme-detail">State and institution-level schemes may have separate rules, application windows and document requirements. Open the portal and check the current academic year.</p><div class="row"><span class="tag">State / UT portal</span><a href="${esc(sp.u)}" target="_blank" rel="noopener noreferrer">Open portal</a> <a href="#" id="allportals">All state portals</a></div>`;$('list').append(st);$('allportals').addEventListener('click',e=>{e.preventDefault();go('states');});
+ if(matches.length){const dh=document.createElement('h3');dh.className='sec';dh.textContent='Document checklist — prepare only what applies';$('list').append(dh);const box=document.createElement('article');box.className='sc dc';const ul=document.createElement('ul');ul.className='ck';const docs=[...new Set(matches.flatMap(x=>x.s.docs))];docs.forEach(d=>{const li=document.createElement('li'),label=document.createElement('label'),cb=document.createElement('input');label.className='chk';cb.type='checkbox';label.append(cb,document.createTextNode(' '+d));li.append(label);ul.append(li);});box.append(ul);$('list').append(box);}
+ $('chips').replaceChildren();['Which scheme should I check first?','What documents should I prepare?','Why is a scheme conditional?','Where do I apply?'].forEach(q=>{const b=document.createElement('button');b.type='button';b.textContent=q;b.addEventListener('click',()=>ask(q));$('chips').append(b);});$('log').replaceChildren();const hello=document.createElement('div');hello.className='msg';hello.textContent='I can explain the matches shown here. I cannot verify your documents or guarantee an award.';$('log').append(hello);
+}
+function card(x){const s=x.s,el=document.createElement('article');el.className='sc';const h=document.createElement('h4');h.textContent=s.n;const by=document.createElement('div');by.className='by';by.textContent=s.by;const amt=document.createElement('div');amt.className='amt';amt.textContent=s.benefit;const status=document.createElement('span');status.className='tag '+(x.warnings.length?'cond':'ok');status.textContent=x.warnings.length?'Conditional — verify':'Potential match';const reason=document.createElement('p');reason.className='scheme-detail';reason.textContent=x.reasons.join(' ');el.append(h,by,amt,status,reason);
+ if(x.warnings.length){const d=document.createElement('details');const su=document.createElement('summary');su.textContent=`What you still need to verify (${x.warnings.length})`;d.append(su);x.warnings.forEach(w=>{const p=document.createElement('p');p.textContent='• '+w;d.append(p);});el.append(d);}
+ const checks=document.createElement('details');const cs=document.createElement('summary');cs.textContent='Full eligibility checks to read';checks.append(cs);s.checks.forEach(c=>{const p=document.createElement('p');p.textContent='• '+c;checks.append(p);});el.append(checks);
+ const row=document.createElement('div');row.className='row';const tags=document.createElement('span');tags.innerHTML=`<span class="tag">${esc(s.incomeLabel)}</span><span class="tag">Academic year ${YEAR}</span>`;const links=document.createElement('span');links.className='scheme-links';links.innerHTML=`<a href="${esc(s.source)}" target="_blank" rel="noopener noreferrer">Official scheme guidelines</a> · <a href="${esc(s.apply)}" target="_blank" rel="noopener noreferrer">Apply / check on NSP</a>`;row.append(tags,links);el.append(row);return el;}
+function drawStates(){const q=$('sf').value.trim().toLowerCase(),grid=$('sg');grid.replaceChildren();const list=P.filter(p=>p.s.toLowerCase().includes(q)||p.n.toLowerCase().includes(q));if(!list.length){const d=document.createElement('div');d.className='empty';d.textContent='No state or portal matches that search.';grid.append(d);return;}list.forEach(p=>{const a=document.createElement('a');a.className='stc';a.href=p.u;a.target='_blank';a.rel='noopener noreferrer';const b=document.createElement('b');b.textContent=p.s;const span=document.createElement('span');span.textContent=p.n+' · Open portal';a.append(b,span);grid.append(a);});}
+function addMsg(text,me=false){const d=document.createElement('div');d.className='msg'+(me?' me':'');d.textContent=text;$('log').append(d);$('log').scrollTop=$('log').scrollHeight;}
+function ask(q){addMsg(q,true);let answer='';if(q.startsWith('Which scheme'))answer=matches.length?`Start with ${matches[0].s.n}. It has the fewest unresolved checks in this shortlist. Still open the official guidelines before applying.`:'No scheme in this shortlist passed the checks. Your State/UT portal and the live NSP list are the best next places to check.';else if(q.startsWith('What documents'))answer=matches.length?[...new Set(matches.flatMap(x=>x.s.docs))].join('; ')+'. Only submit documents requested by the official application.' :'Document requirements depend on the scheme. Check the official guidelines and your State/UT portal.';else if(q.startsWith('Why is'))answer=matches.flatMap(x=>x.warnings).slice(0,5).join(' ')||'A scheme is conditional when an important detail is unknown or must be checked in the official guidelines.';else answer=`Use your State/UT portal (${pf(ans.state).n}) and the National Scholarship Portal at ${NSP}. The links open government websites; ScholarSetu does not collect applications.`;addMsg(answer);}
+function free(){const q=$('q').value.trim();if(!q)return;$('q').value='';const l=q.toLowerCase();if(/document|certificate|paper/.test(l))ask('What documents should I prepare?');else if(/first|best|apply|scheme/.test(l))ask('Which scheme should I check first?');else if(/conditional|why|verify/.test(l))ask('Why is a scheme conditional?');else if(/where|portal|link/.test(l))ask('Where do I apply?');else{addMsg(q,true);addMsg('I can currently explain the shortlist, document checklist, conditional checks and official application portals. For a definitive answer, use the official scheme guidelines or contact your institute/state nodal officer.');}}
+$('go').addEventListener('click',free);$('q').addEventListener('keydown',e=>{if(e.key==='Enter')free();});$('sf').addEventListener('input',drawStates);$('cp').addEventListener('click',async()=>{const text=`ScholarSetu preliminary scholarship shortlist (${YEAR})
+Domicile: ${ans.state}
+Category: ${ans.cat}
+Study level: ${ans.lvl}
+Annual family income: ${ans.inc===null?'not entered':f(ans.inc)}
+
+${matches.map((x,i)=>`${i+1}. ${x.s.n}
+Status: ${x.warnings.length?'Conditional — verify':'Potential match'}
+Benefit: ${x.s.benefit}
+Official guidelines: ${x.s.source}
+NSP: ${x.s.apply}
+Checks: ${[...x.warnings,...x.s.checks].join(' ')}`).join(String.fromCharCode(10,10))}
+
+State portal: ${pf(ans.state).u}
+National Scholarship Portal: ${NSP}
+Note: This is not an eligibility decision. Confirm current-year rules and dates on official portals.`;try{await navigator.clipboard.writeText(text);$('cp').textContent='Copied!';}catch(e){const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.append(ta);ta.select();const ok=document.execCommand('copy');ta.remove();$('cp').textContent=ok?'Copied!':'Copy unavailable';}setTimeout(()=>$('cp').textContent='Copy results',2200);});
+$('print').addEventListener('click',()=>window.print());
+// No profile data is written to localStorage, cookies or a ScholarSetu server.
+show(1);
+</script>
+</body>
+</html>
